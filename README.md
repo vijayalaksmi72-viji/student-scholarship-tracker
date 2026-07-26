@@ -249,20 +249,19 @@ Base URL: `http://localhost:5000/api`
 - [x] Playwright end-to-end UI test suite
 
 ---
-
 ## 📸 Screenshots
 
 ### Dashboard
-![Dashboard](screenshots/dashboard.png)
+![Dashboard](./screenshot/dashboard.png)
 
 ### Add Application
-![Add Application](screenshots/add-application.png)
+![Add Application](./screenshot/add-application.png)
 
 ### Edit Application
-![Edit Application](screenshots/edit-application.png)
+![Edit Application](./screenshot/edit-application.png)
 
 ### Empty State
-![Empty State](screenshots/empty-state.png)
+![Empty State](./screenshot/empty-state.png)
 ## 🎥 Demo Video
 
 Project demonstration video:
