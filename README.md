@@ -260,6 +260,11 @@ Base URL: `http://localhost:5000/api`
 > ![Empty State](screenshots/empty-state.png)
 
 ---
+## 🎥 Demo Video
+
+Project demonstration video:
+
+[Watch Student Scholarship Tracker Demo](https://drive.google.com/file/d/1Mijyeil2UjlTX5oss_7G6g-Ty_pw_Q2g/view?usp=sharing)
 
 ## 🔮 Future Enhancements
 
