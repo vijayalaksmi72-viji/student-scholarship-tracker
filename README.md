@@ -252,13 +252,17 @@ Base URL: `http://localhost:5000/api`
 
 ## 📸 Screenshots
 
-> Add screenshots here after running the app locally, e.g.:
->
-> ![Dashboard](screenshots/dashboard.png)
-> ![Add Application](screenshots/add-application.png)
-> ![Edit Application](screenshots/edit-application.png)
-> ![Empty State](screenshots/empty-state.png)
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
 
+### Add Application
+![Add Application](screenshots/add-application.png)
+
+### Edit Application
+![Edit Application](screenshots/edit-application.png)
+
+### Empty State
+![Empty State](screenshots/empty-state.png)
 ---
 ## 🎥 Demo Video
 
