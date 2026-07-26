@@ -263,7 +263,6 @@ Base URL: `http://localhost:5000/api`
 
 ### Empty State
 ![Empty State](screenshots/empty-state.png)
----
 ## 🎥 Demo Video
 
 Project demonstration video:
