@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Palette: deep indigo -> violet, warm amber accent for "amount" data,
+     teal for success/disbursed. Chosen to evoke trust + government/education
+     without leaning on a single flat purple. */
+  --color-ink: #1a1c2e;
+  --color-ink-soft: #4b4d63;
+  --color-bg: #f6f5fb;
+  --color-surface: #ffffff;
+  --color-border: #e5e3f1;
+
+  --indigo-600: #4338ca;
+  --indigo-500: #4f46e5;
+  --violet-500: #7c3aed;
+  --violet-400: #8b5cf6;
+
+  --teal-500: #0d9488;
+  --teal-100: #ccfbf1;
+
+  --amber-500: #d97706;
+  --amber-100: #fef3c7;
+
+  --rose-500: #e11d48;
+  --rose-100: #ffe4e6;
+
+  --sky-500: #0284c7;
+  --sky-100: #e0f2fe;
+
+  --gradient-brand: linear-gradient(135deg, var(--indigo-600) 0%, var(--violet-500) 100%);
+  --gradient-1: linear-gradient(135deg, #4338ca 0%, #6d28d9 100%);
+  --gradient-2: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+  --gradient-3: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+  --gradient-4: linear-gradient(135deg, #059669 0%, #0d9488 100%);
+
+  --shadow-sm: 0 1px 2px rgba(26, 28, 46, 0.06);
+  --shadow-md: 0 4px 16px rgba(26, 28, 46, 0.08);
+  --shadow-lg: 0 12px 32px rgba(67, 56, 202, 0.14);
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+
+  --font-display: 'Lexend', 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--color-ink);
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+::selection {
+  background: var(--violet-400);
+  color: white;
+}
+
+/* Shared button system used across the app */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--gradient-brand);
+  color: white;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover:not(:disabled) {
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  border-color: var(--color-border);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #f0eefc;
+}
+
+.btn-danger {
+  background: var(--rose-500);
+  color: white;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: #be123c;
+}
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  color: var(--color-ink-soft);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.icon-btn:hover {
+  background: #efedfb;
+  color: var(--indigo-600);
+}
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Modal for delete confirmation */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(26, 28, 46, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.15s ease;
+  padding: 16px;
+}
+
+.modal-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: var(--shadow-lg);
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.modal-card p {
+  color: var(--color-ink-soft);
+  line-height: 1.5;
+  margin-bottom: 22px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

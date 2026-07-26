@@ -1,0 +1,25 @@
+.filter-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  min-width: 190px;
+}
+
+.filter-icon {
+  color: var(--color-ink-soft);
+  flex-shrink: 0;
+}
+
+.filter-select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  flex: 1;
+  cursor: pointer;
+}

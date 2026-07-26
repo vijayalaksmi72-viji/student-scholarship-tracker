@@ -1,0 +1,134 @@
+.table-wrapper {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  overflow-x: auto;
+  animation: fadeIn 0.3s ease;
+  box-shadow: var(--shadow-sm);
+}
+
+.app-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 980px;
+  font-size: 0.86rem;
+}
+
+.app-table thead th {
+  text-align: left;
+  padding: 14px 16px;
+  background: #faf9fd;
+  color: var(--color-ink-soft);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--color-border);
+  white-space: nowrap;
+}
+
+.th-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.app-table tbody td {
+  padding: 14px 16px;
+  border-bottom: 1px solid #f1f0f9;
+  color: var(--color-ink);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.app-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.app-table tbody tr {
+  transition: background 0.12s ease;
+}
+
+.app-table tbody tr:hover {
+  background: #faf9ff;
+}
+
+.cell-mono {
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.78rem;
+  color: var(--indigo-600);
+  font-weight: 600;
+}
+
+.cell-name {
+  font-weight: 600;
+}
+
+.cell-missing {
+  color: #b4b2c6;
+  font-style: italic;
+  font-weight: 400;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.badge-submitted {
+  background: var(--sky-100);
+  color: #0369a1;
+}
+
+.badge-review {
+  background: var(--amber-100);
+  color: #92400e;
+}
+
+.badge-approved {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.badge-disbursed {
+  background: var(--teal-100);
+  color: #0f766e;
+}
+
+.badge-rejected {
+  background: var(--rose-100);
+  color: #9f1239;
+}
+
+.days-waiting {
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.days-waiting.warning {
+  color: var(--rose-500);
+}
+
+.th-actions {
+  text-align: right;
+}
+
+.row-actions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.action-edit:hover {
+  background: #e0e7ff;
+  color: var(--indigo-600);
+}
+
+.action-delete:hover {
+  background: var(--rose-100);
+  color: var(--rose-500);
+}

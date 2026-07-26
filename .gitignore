@@ -1,0 +1,21 @@
+node_modules/
+dist/
+build/
+.env
+.env.local
+*.log
+npm-debug.log*
+
+# SQLite runtime files (regenerated automatically on first backend run)
+database/scholarship.db
+database/scholarship.db-shm
+database/scholarship.db-wal
+
+# Playwright
+frontend/test-results/
+frontend/playwright-report/
+frontend/playwright/.cache/
+
+# OS
+.DS_Store
+Thumbs.db
